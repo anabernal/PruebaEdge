@@ -1,0 +1,52 @@
+﻿<Window x:Class="PruebaEdge.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PruebaEdge"
+        mc:Ignorable="d"
+        Title="Personajes" Height="608" Width="800" Loaded="Window_Loaded">
+    <Window.Background>
+        <ImageBrush ImageSource="/imagenes/dv.jpg" Stretch="UniformToFill"/>
+    </Window.Background>
+    <Grid Margin="0,0,0,8">
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label Content="Character Name:" HorizontalAlignment="Left" Margin="68,0,0,0" VerticalAlignment="Center" Width="182" Foreground="#FFFCF3F3" FontWeight="Bold" FontSize="16"/>
+        <Label Content="Height:" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Foreground="#FFFCF3F3" FontWeight="Bold" FontSize="16"/>
+        <Label Content="Mass:" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Top" Margin="0,4,0,0" Foreground="#FFFCF3F3" FontWeight="Bold" FontSize="16"/>
+        <Label Content="Hair color:" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Top" Margin="0,4,0,0" Foreground="#FFFCF3F3" FontWeight="Bold" FontSize="16"/>
+        <Label Content="Eyes Color:" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Top" Margin="0,4,0,0" Foreground="#FFFCF3F3" FontWeight="Bold" FontSize="16"/>
+        <Label Content="Gender:" HorizontalAlignment="Center" Grid.Row="5" VerticalAlignment="Top" Margin="0,4,0,0" Foreground="#FFFCF3F3" FontWeight="Bold" FontSize="16"/>
+
+        <Button Name="btnBuscar" Click="btnBuscar_Click" Content="Buscar" HorizontalAlignment="Left" Height="58" Margin="123,0,0,0" Grid.Row="6" VerticalAlignment="Center" Width="122" Grid.Column="1" Foreground="#FF2B2626" FontSize="20"/>
+        <Label Content="-" Name="lblAlturaResult" Grid.Column="1" HorizontalAlignment="Left" Height="40" Margin="28,0,0,0"  VerticalAlignment="Center" Width="151" Grid.Row="1" Foreground="#FFFCF3F3" FontWeight="Bold" FontSize="16"/>
+        <Label Content="-" x:Name="lblMasaResult" Grid.Column="1" HorizontalAlignment="Left" Height="40" Margin="28,4,0,0"  VerticalAlignment="Top" Width="151" Grid.Row="2" Foreground="#FFFCF3F3" FontWeight="Bold" FontSize="16"/>
+        <Label Content="-" x:Name="lblColorPeloResult" Grid.Column="1" HorizontalAlignment="Left" Height="40" Margin="28,5,0,0"  VerticalAlignment="Top" Width="151" Grid.Row="3" Foreground="#FFFCF3F3" FontWeight="Bold" FontSize="16"/>
+        <Label Content="-" x:Name="lblColorOjosResult" Grid.Column="1" HorizontalAlignment="Left" Height="40" Margin="26,0,0,0"  VerticalAlignment="Center" Width="151" Grid.Row="4" Foreground="#FFFCF3F3" FontWeight="Bold" FontSize="16"/>
+        <Label Content="-" x:Name="lblGeneroResult" Grid.Column="1" HorizontalAlignment="Left" Height="40" Margin="28,4,0,0"  VerticalAlignment="Top" Width="151" Grid.Row="5" Foreground="#FFFCF3F3" FontWeight="Bold" FontSize="16"/>
+        <ComboBox Name="cboPersonajes" Grid.Column="1" HorizontalAlignment="Left" Margin="26,14,0,0" VerticalAlignment="Top" Width="249" FontWeight="Bold" FontSize="16"/>
+
+
+
+
+
+
+
+
+
+    </Grid>
+</Window>
