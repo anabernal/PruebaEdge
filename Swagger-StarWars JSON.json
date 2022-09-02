@@ -1,0 +1,171 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "API de personajes de StarWars",
+    "description": "Esta API se encarga de manejar la información de los personajes principales de la saga Star Wars.",
+    "version": "1.0.11"
+  },
+  "servers": [
+    {
+      "url": "https://swapi.dev/api/"
+    }
+  ],
+  "paths": {
+    "/people": {
+      "get": {
+        "summary": "Retorna la lista de personajes de la pelicula en formato JSON",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/people/{id}": {
+      "get": {
+        "summary": "Retorna los datos de un personaje en especifico en formato JSON utilizando el ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "se debe ingresar un numero entero para retornar un personaje en formato JSON",
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "minimum": 1
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "ID invalido"
+          },
+          "404": {
+            "description": "Personaje no detectado"
+          },
+          "default": {
+            "description": "error!"
+          }
+        }
+      }
+    },
+    "/starships": {
+      "get": {
+        "summary": "Retorna la lista de naves de la pelicula en formato JSON",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/starships/{id}": {
+      "get": {
+        "summary": "Retorna los datos de una nave en especifica en formato JSON utilizando el ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "se debe ingresar un numero entero",
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "minimum": 1
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "ID invalido"
+          },
+          "404": {
+            "description": "Nave no detectada"
+          },
+          "default": {
+            "description": "error!"
+          }
+        }
+      }
+    },
+    "/planets": {
+      "get": {
+        "summary": "Retorna la lista de planetas de la pelicula en formato JSON",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/planets/{id}": {
+      "get": {
+        "summary": "Retorna los datos de un planeta en especifico en formato JSON utilizando el ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "se debe ingresar un numero entero",
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "minimum": 1
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "ID invalido"
+          },
+          "404": {
+            "description": "Planeta no detectado"
+          },
+          "default": {
+            "description": "error!"
+          }
+        }
+      }
+    }
+  }
+}
